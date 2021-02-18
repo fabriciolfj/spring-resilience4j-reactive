@@ -5,11 +5,11 @@
   - tempos em tempos, o circuit breaker verifica a saúde do fluxo original, caso esteja ok, o circuito fica meio aberto (parte das chamadas caem no fluxo orignal e alternativo)
   - se nenhuma falha for idenficada no fluxo original, nesse tempo, o circuit breaker é fechado e as chamadas voltam exclusivamente para o fluxo original, caso contrário, fica aberto e interrompe as chamdas para o fluxo original.
 - Resilience4j possui os seguintes recursos: 
-  - ratelimiter
-  - timelimiter
-  - circuitbreaker
-  - retry
-  - bulkhead
+  - ratelimiter -> número máximo de solicitação por um período
+  - timelimiter -> configura o timeout de chamada.
+  - circuitbreaker -> tratativa de curto circuito
+  - retry -> numero de retentativas
+  - bulkhead -> quantidade de chamadas simultâneas.
   - obs: detalhes de cada recurso, serão encontrados nos repositórios: https://github.com/fabriciolfj/spring-resilience4j, https://github.com/fabriciolfj/Spring-Microservices-in-Action
 
 # Uso do retry do spring
